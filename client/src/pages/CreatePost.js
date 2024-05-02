@@ -19,7 +19,7 @@ export default function CreatePost(){
       data.set('content', content);
       data.set('file', files[0]);
       
-      fetch('http://localhost:4000/post',{
+      fetch('https://blog-1-0bqs.onrender.com/post',{
         method: 'POST',
         body: data,
         credentials: 'include',
