@@ -11,7 +11,6 @@ export const LoginPage = () => {
     async function login(e){
         e.preventDefault();
         const response = await fetch('https://blog-1-0bqs.onrender.com/login',{
-            mode: 'no-cors',
             method: 'POST',
             body: JSON.stringify({username, password}),
             headers: {'Content-Type': 'application/json'},

@@ -20,7 +20,6 @@ export default function CreatePost(){
       data.set('file', files[0]);
       
       fetch('https://blog-1-0bqs.onrender.com/post',{
-        mode: 'no-cors',
         method: 'POST',
         body: data,
         credentials: 'include',
