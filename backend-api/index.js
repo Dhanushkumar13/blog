@@ -20,9 +20,17 @@ const secret = 'awdsadkalsdk129843knasdja'
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://blog-indol-one-10.vercel.app');
-    // Other CORS headers if needed
-    next();
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.setHeader('Access-Control-Allow-Credentials', 'true'); // Include this line to allow credentials
+    // Handle preflight requests
+    if (req.method === 'OPTIONS') {
+        res.sendStatus(200);
+    } else {
+        next();
+    }
 });
+
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'))
