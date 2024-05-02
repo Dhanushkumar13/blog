@@ -6,7 +6,7 @@ export default function IndexPage(){
   const [posts, setPosts] = useState([]);
 
   useEffect(()=>{
-    fetch('https://blog-1-0bqs.onrender.com/post').then(response =>{
+    fetch('https://blog-indol-one-10.vercel.app/post').then(response =>{
       response.json().then(posts =>{
         setPosts(posts);
       });

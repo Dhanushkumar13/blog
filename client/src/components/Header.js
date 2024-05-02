@@ -5,7 +5,7 @@ import { UserContext } from '../UserContext';
 export const Header = () => {
   const {setUserInfo, userInfo} = useContext(UserContext);
   useEffect(()=>{
-    fetch('https://blog-1-0bqs.onrender.com/profile', {
+    fetch('https://blog-indol-one-10.vercel.app/profile', {
       credentials: 'include', 
     }).then(response => {
       response.json().then(res =>{
@@ -15,7 +15,7 @@ export const Header = () => {
   },[])
 
   async function logout(){
-    await fetch('https://blog-1-0bqs.onrender.com/logout', {
+    await fetch('https://blog-indol-one-10.vercel.app/logout', {
       credentials: 'include',
       method: 'POST',
     })
