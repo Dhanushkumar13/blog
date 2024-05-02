@@ -6,6 +6,7 @@ export const Header = () => {
   const {setUserInfo, userInfo} = useContext(UserContext);
   useEffect(()=>{
     fetch('https://blog-1-0bqs.onrender.com/profile', {
+      mode: 'no-cors',
       credentials: 'include', 
     }).then(response => {
       response.json().then(res =>{
@@ -16,6 +17,7 @@ export const Header = () => {
 
   async function logout(){
     await fetch('https://blog-1-0bqs.onrender.com/logout', {
+      mode: 'no-cors',
       credentials: 'include',
       method: 'POST',
     })

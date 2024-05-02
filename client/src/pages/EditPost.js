@@ -13,6 +13,7 @@ export default function EditPost(){
 
     useEffect(() => {
         fetch(`https://blog-1-0bqs.onrender.com/${id}`,{
+            mode: 'no-cors',
         })
         .then(response => {
             response.json().then(postInfo => {
@@ -34,6 +35,7 @@ export default function EditPost(){
             data.set('file',files?.[0])
         }
         const response = await fetch('https://blog-1-0bqs.onrender.com/post',{
+            mode: 'no-cors',
             method: 'PUT',
             body: data,
             credentials: 'include',

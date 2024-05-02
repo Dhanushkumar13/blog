@@ -6,7 +6,9 @@ export default function PostPage(){
     const [postInfo, setPostInfo] = useState(null)
     const {id} = useParams();
     useEffect(() => {
-        fetch(`https://blog-1-0bqs.onrender.com/${id}`)
+        fetch(`https://blog-1-0bqs.onrender.com/${id}`,{
+            mode: 'no-cors',
+        })
         .then(response => response.json())
         .then(postInfo => {
             setPostInfo(postInfo);
