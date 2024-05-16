@@ -6,7 +6,7 @@ export default function PostPage(){
     const [postInfo, setPostInfo] = useState(null)
     const {id} = useParams();
     useEffect(() => {
-        fetch(`https://blog-indol-one-10.vercel.app/${id}`)
+        fetch(`https://blog-1-0bqs.onrender.com/${id}`)
         .then(response => response.json())
         .then(postInfo => {
             setPostInfo(postInfo);
@@ -34,7 +34,7 @@ export default function PostPage(){
                 </div>
             )}
             <div className="image">
-                <img src={`https://blog-indol-one-10.vercel.app/${postInfo.cover}`} alt=""></img>
+                <img src={`https://blog-1-0bqs.onrender.com/${postInfo.cover}`} alt=""></img>
             </div>
             <div className='content' dangerouslySetInnerHTML={{__html:postInfo.content}}/>
         </div>

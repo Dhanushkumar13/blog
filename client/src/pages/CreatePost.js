@@ -19,7 +19,7 @@ export default function CreatePost(){
       data.set('content', content);
       data.set('file', files[0]);
       
-      fetch('https://blog-indol-one-10.vercel.app/post',{
+      fetch('https://blog-1-0bqs.onrender.com/post',{
         method: 'POST',
         body: data,
         credentials: 'include',
