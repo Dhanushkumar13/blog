@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const cors = require('cors');
 const User = require('./models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -12,13 +11,19 @@ const fs = require('fs');
 const Post = require('./models/Post');
 const dotenv = require('dotenv')
 
+const cors = require('cors');
 dotenv.config();
 require("./configs/dbConfig");
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'awdsadkalsdk129843knasdja'
 
-app.use(cors({origin:'*', credentials: true}));
+const corsOptions = {
+    origin: ['https://blog-indol-one-10.vercel.app'],
+    Credentials: true
+}
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'))
