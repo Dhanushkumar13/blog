@@ -18,7 +18,7 @@ require("./configs/dbConfig");
 const salt = bcrypt.genSaltSync(10);
 const secret = 'awdsadkalsdk129843knasdja'
 
-app.use(cors({origin:['https://blog-indol-one-10.vercel.app'], credentials: true}));
+app.use(cors({origin:'*', credentials: true}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'))
