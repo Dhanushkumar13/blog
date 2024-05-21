@@ -14,7 +14,7 @@ export const LoginPage = () => {
             method: 'POST',
             body: JSON.stringify({username, password}),
             headers: {'Content-Type': 'application/json'},
-            credentials: 'true', 
+            credentials: 'include', 
         })
         if(response.ok){
           response.json().then(userInfo =>{

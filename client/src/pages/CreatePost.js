@@ -22,7 +22,7 @@ export default function CreatePost(){
       fetch('https://blog-1-0bqs.onrender.com/post',{
         method: 'POST',
         body: data,
-        credentials: 'true',
+        credentials: 'include',
       }).then(response => {
         if (response.ok) {
           setRedirect(true)
