@@ -19,7 +19,7 @@ const salt = bcrypt.genSaltSync(10);
 const secret = 'awdsadkalsdk129843knasdja'
 
 const corsOptions = {
-    origin: ['https://blog-indol-one-10.vercel.app'],
+    origin: ['https://blog-indol-one-10.vercel.app/*'],
     Credentials: true
 }
 
