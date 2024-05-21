@@ -36,7 +36,7 @@ export default function EditPost(){
         const response = await fetch(`https://blog-1-0bqs.onrender.com/post`,{
             method: 'PUT',
             body: data,
-            credentials: 'true',
+            // credentials: 'true',
         })
         if(response.ok){
             setRedirect(true);
