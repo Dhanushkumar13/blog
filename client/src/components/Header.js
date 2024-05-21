@@ -6,7 +6,7 @@ export const Header = () => {
   const {setUserInfo, userInfo} = useContext(UserContext);
   useEffect(()=>{
     fetch('https://blog-1-0bqs.onrender.com/profile', {
-      credentials: 'include', 
+      credentials: 'true', 
     }).then(response => {
       response.json().then(res =>{
         setUserInfo(userInfo);
@@ -16,7 +16,7 @@ export const Header = () => {
 
   async function logout(){
     await fetch('https://blog-1-0bqs.onrender.com/logout', {
-      credentials: 'include',
+      credentials: 'true',
       method: 'POST',
     })
     setUserInfo(null);
